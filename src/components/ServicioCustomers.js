@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Global from './Gobal';
+import Global from '../Global';
 
 //LO PRIMERO ES UTILIZAR LA LIBRERIA DE axios 
 

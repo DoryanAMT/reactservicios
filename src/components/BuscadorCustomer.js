@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios, { Axios } from 'axios'
-import Global from './Gobal'
+import Global from '../Global';
 
 export default class BuscadorCustomer extends Component {
     urlApi = Global.urlApiCustomer
@@ -23,6 +23,7 @@ export default class BuscadorCustomer extends Component {
             this.setState({
                 customer: response.data.customer
             });
+            console.log(this.state.customer)
         })
 
     }
