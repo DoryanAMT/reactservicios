@@ -1,22 +1,27 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import Global from '../../Global'
+import Global from './../../Global'
 
 export default class Empleados extends Component {
   state = {
-    empleado: []
+    empleados: []
   }
 
   loadEmpleados = () => {
     let idDepartamento = this.props.iddepartamento;
-    var request = "api/empleados/empleadodepartamento/"+idDepartamento;
-    var url = Global.urlApiEmpleados + request;
+    let request = "api/Empleados/EmpleadosDepartamento/"+idDepartamento;
+    let url = Global.urlApiEmpleados + request;
+    console.log(url);
     axios.get(url).then(response => {
-      console.log(response.data)
+      console.log(response.data);
       this.setState({
-        empleado: response.data
+        empleados: response.data
       })
     })
+  }
+
+  componentDidMount = () => {
+    this.loadEmpleados();
   }
 
 
@@ -24,7 +29,7 @@ export default class Empleados extends Component {
   render() {
     return (
       <div>
-        <h1>Empleados Component</h1>
+        <h1>Empleados Component {this.props.iddepartamento}</h1>
         <table border="1">
           <thead>
             <tr>
@@ -35,7 +40,7 @@ export default class Empleados extends Component {
           </thead>
           <tbody>
             {
-              this.state.empleado.map((empleado, index) => {
+              this.state.empleados.map((empleado, index) => {
                 return(
                   <tr key={index}>
                     <td>{empleado.apellido}</td>

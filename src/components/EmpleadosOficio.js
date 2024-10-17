@@ -17,11 +17,13 @@ export default class EmpleadosOficio extends Component {
         let url = Global.urlApiDepartamentos + request;
 
         axios.get(url).then(response => {
-            console.log(response.data);
+            // console.log(response.data);
             this.setState({
                 departamentos: response.data
             })
         })
+
+        console.log(this.state.departamentos);
     }
 
 
@@ -33,10 +35,11 @@ export default class EmpleadosOficio extends Component {
         console.log(this.selectOficio);
         let request = "api/Empleados/EmpleadosDepartamento/";
         let url = Global.urlApiEmpleados + request + idDepartamento;
+        // console.log(url);
         
-        // console.log(url)
+        console.log(url)
         axios.get(url).then(response => {
-            console.log(response.data);
+            // console.log(response.data);
             this.setState({
                 empleados: response.data
             })
