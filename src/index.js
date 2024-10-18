@@ -9,7 +9,9 @@ import CocheServiciosApi from './components/CocheServiciosApi';
 import DepartamentosEmpleados from './components/DepartamentosEmpleados';
 import EmpleadosOficio from './components/EmpleadosOficio';
 import Departamentos from './components/MaestroDetalle/Departamentos';
-
+import TablaMultiplicar from './components/TablaMultiplicar';
+import Router from './components/Router';
+import MenuRutas from './components/MenuRutas';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
@@ -20,7 +22,16 @@ root.render(
   // </React.StrictMode>
     // <DepartamentosEmpleados/>
     // <EmpleadosOficio/>
-    <Departamentos/>
+    // <Departamentos/>
+    // <div>
+    //   <TablaMultiplicar numero="7 "/>
+    //   <TablaMultiplicar numero="3 "/>
+    // </div>
+    <div>
+      <MenuRutas/>
+      <Router/>
+    </div>
+    
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,0 +1,45 @@
+import { tab } from '@testing-library/user-event/dist/tab';
+import React, { Component } from 'react'
+
+export default class TablaMultiplicar extends Component {
+
+    state = {
+        tabla: [],
+    }
+
+    generarTablaMultiplar = () => {
+        let aux = [];
+        let num = parseInt(this.props.numero);
+        for (let i = 1; i <= 10 ; i++) {
+            var operacion = num * i
+            aux.push(operacion);
+        }
+        this.setState({
+            tabla: aux
+        })
+    }
+
+    componentDidMount = () => {
+        this.generarTablaMultiplar();
+    }
+
+
+  render() {
+    return (
+      <div>
+        <h1>Tabla Multiplicar Rutas</h1>
+        <h3 style={{color:"blue"}}>Número: {this.props.numero}</h3>
+        <ul>
+            {
+                this.state.tabla &&
+                this.state.tabla.map((numero, index) => {
+                    return(
+                        <li key={index}>{numero}</li>
+                    );
+                })
+            }
+        </ul>
+      </div>
+    )
+  }
+}
