@@ -57,7 +57,7 @@ export default class CocheServiciosApi extends Component {
             <button onClick={this.loadCoches}>Buscar</button>
         </form>
 
-        <table border={1}>
+        <table border={1} className='table table-dark'>
             <thead>
                 <tr>
                     <th>Marca</th>

@@ -1,3 +1,8 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import $ from 'jquery';
+import Popper from 'popper.js';
+import "bootstrap/dist/js/bootstrap.bundle";
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -18,7 +23,7 @@ root.render(
   //   {/* <App /> */}
   //   {/* <BuscadorCustomer/> */}
   //   {/* <ServiciosCustomers/> */}
-  //   {/* <CocheServiciosApi/> */}
+  // <CocheServiciosApi/>
   // </React.StrictMode>
     // <DepartamentosEmpleados/>
     // <EmpleadosOficio/>
@@ -28,7 +33,7 @@ root.render(
     //   <TablaMultiplicar numero="3 "/>
     // </div>
     <div>
-      <MenuRutas/>
+      {/* <MenuRutas/> */}
       <Router/>
     </div>
     

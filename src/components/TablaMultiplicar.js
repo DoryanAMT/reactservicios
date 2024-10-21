@@ -7,7 +7,7 @@ export default class TablaMultiplicar extends Component {
         tabla: [],
     }
 
-    generarTablaMultiplar = () => {
+    generarTablaMultiplicar = () => {
         let aux = [];
         let num = parseInt(this.props.numero);
         for (let i = 1; i <= 10 ; i++) {
@@ -19,8 +19,14 @@ export default class TablaMultiplicar extends Component {
         })
     }
 
+    componentDidUpdate = (oldProps) => {
+        if(oldProps.numero != this.props.numero){
+            this.generarTablaMultiplicar()
+        }
+    }
+
     componentDidMount = () => {
-        this.generarTablaMultiplar();
+        this.generarTablaMultiplicar();
     }
 
 

@@ -4,13 +4,11 @@ import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import TablaMultiplicar from './TablaMultiplicar'
 import Home from './Home'
 import NotFound from './NotFound'
+import MenuRutas from './MenuRutas'
 
 
 
 export default class Router extends Component {
-
-    
-
 
   render() {
     function TablaMultiplicarElement(){
@@ -28,10 +26,11 @@ export default class Router extends Component {
     }
     return (
       <BrowserRouter>
+      <MenuRutas/>
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/tabla/:minumero' 
-                element={<TablaMultiplicar/>}/>
+                element={<TablaMultiplicarElement/>}/>
             {/* PARA LAS RUTAS QUE NO EXISTEN DEBEMOS UTILIZAR
             UN ASTERISCO DETNRO DEL APTH Y DEBE SER
             LA ULTIMA ETIQUETA DE <Routes>  */}
