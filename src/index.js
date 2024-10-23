@@ -17,6 +17,7 @@ import Departamentos from './components/MaestroDetalle/Departamentos';
 import TablaMultiplicar from './components/TablaMultiplicar';
 import Router from './components/Router';
 import MenuRutas from './components/MenuRutas';
+import HospitalesMultiples from "./components/HospitalesMultiples";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
@@ -34,7 +35,8 @@ root.render(
     // </div>
     <div>
       {/* <MenuRutas/> */}
-      <Router/>
+      {/* <Router/> */}
+      <HospitalesMultiples/>
     </div>
     
 );
